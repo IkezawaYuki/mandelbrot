@@ -2,6 +2,8 @@ mod utils;
 mod logic;
 
 use wasm_bindgen::prelude::*;
+use wasm_bindgen::{Clamped, JsCast};
+use web_sys::ImageData;
 
 // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
 // allocator.
@@ -9,7 +11,7 @@ use wasm_bindgen::prelude::*;
 #[global_allocator]
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
-#[wasm_bindgen]
+#[wasm_bindgen] //todo
 extern {
     fn alert(s: &str);
 }
